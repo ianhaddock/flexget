@@ -1,4 +1,5 @@
-# flexget config.yml
+# flexget example config.yml
+# please be kind to raspberrypi.org if you adjust for testing
 ---
 schedules:
   - tasks: [raspberrypios]
