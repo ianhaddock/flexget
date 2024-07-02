@@ -1,0 +1,16 @@
+# flexget config.yml
+---
+schedules:
+  - tasks: [raspberrypios]
+    interval:
+      days: 14
+      jitter: 60
+
+tasks:
+  raspberrypios:
+    rss:
+      url: "https://downloads.raspberrypi.org/rss.xml"
+    regexp:
+      accept:
+        - '2024-03-15'
+    download: "/watch_folder"

@@ -1,0 +1,10 @@
+# gitignore
+
+.DS_Store
+
+# app
+/config/*
+!/config/config.yml
+/watch_folder/*
+!/watch_folder/.placeholder
+
