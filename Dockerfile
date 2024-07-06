@@ -13,7 +13,9 @@ RUN apt-get clean
 
 WORKDIR /flexget
 
-RUN mkdir -p {/watch_folder,/config}
+RUN mkdir /watch_folder
+
+RUN mkdir /config
 
 COPY ./config/config.yml /config/config.yml
 
