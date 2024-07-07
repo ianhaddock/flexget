@@ -10,5 +10,5 @@ docker run \
   --name flexget
   -v ./watch_folder:/watch_folder
   -v ./config:/config
-  docker.io/ianhaddock/flexget
+  ghcr.io/ianhaddock/flexget
 ```
