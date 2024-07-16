@@ -2,14 +2,10 @@ name: Docker Publish
 # from https://github.com/actions/starter-workflows/tree/main
 
 on:
-  schedule:
-    - cron: $cron-daily
   push:
     branches: [ $default-branch ]
     # Publish ver tags as releases.
     tags: [ 'v*.*.*' ]
-  pull_request:
-    branches: [ $default-branch ]
 
 env:
   # Use docker.io for Docker Hub if empty

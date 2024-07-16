@@ -1,0 +1,7 @@
+# github action
+---
+name: github action
+author: Ian Haddock
+description: Github action for flexget project
+
+inputs:
