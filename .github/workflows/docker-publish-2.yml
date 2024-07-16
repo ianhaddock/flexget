@@ -1,4 +1,4 @@
-name: Docker Publish
+name: Docker Publish 2
 # from https://github.com/actions/starter-workflows/tree/main
 
 on:
