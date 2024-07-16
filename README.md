@@ -2,8 +2,7 @@
 
 My spin on flexget in a container
 
-![Docker CI](https://github.com/ianhaddock/flexget/actions/workflows/docker-image.yml/badge.svg)
-![Docker Image](https://github.com/ianhaddock/flexget/actions/workflows/docker-publish.yml/badge.svg)
+[![Docker Image CI](https://github.com/ianhaddock/flexget/actions/workflows/docker-image-ci.yml/badge.svg)](https://github.com/ianhaddock/flexget/actions/workflows/docker-image-ci.yml)
 
 ### Usage
 
