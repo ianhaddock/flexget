@@ -6,7 +6,7 @@ on:
     - cron: $cron-daily
   push:
     branches: [ $default-branch ]
-    # Publish semver tags as releases.
+    # Publish ver tags as releases.
     tags: [ 'v*.*.*' ]
   pull_request:
     branches: [ $default-branch ]
