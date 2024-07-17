@@ -5,8 +5,6 @@ FROM docker.io/library/python:3.12-slim-bullseye
 
 RUN apt-get update
 
-#RUN apt-get install gcc g++ musl-dev linux-headers -y
-
 RUN pip3 install flexget
 
 RUN apt-get clean
