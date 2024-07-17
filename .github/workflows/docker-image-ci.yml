@@ -65,7 +65,6 @@ jobs:
             ianhaddock/${{ env.IMAGE_NAME }}
           tags: |
             type=ref,event=branch
-            type=ref,event=pr
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
 
@@ -81,5 +80,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          cache-from: |
+            type=gha, scope=${{ github.ref_name }}
+            type=gha, scope=${{ github.base_ref }}
+          cache-to: type=gha, mode=max, scope=${{ github.ref_name }}
