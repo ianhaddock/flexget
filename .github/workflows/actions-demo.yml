@@ -1,5 +1,5 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: Actions Demo
+run-name: ${{ github.actor }} is testing Actions 🚀
 on:
   push:
     branches:
@@ -22,5 +22,4 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-          cat ${{ github.workspace }}/*
       - run: echo "🍏 This job's status is ${{ job.status }}."
