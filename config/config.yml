@@ -1,10 +1,16 @@
 # flexget example config.yml
-# please be kind to raspberrypi.org if you adjust for testing
+# please be kind to the below providers if you adjust for testing
+#
 ---
 schedules:
   - tasks: [raspberrypios]
     interval:
       days: 14
+      jitter: 60
+  - tasks: [libreoffice_mac, libreoffice_rpm]
+    schedule:
+      hour: 9
+      day_of_week: tue
       jitter: 60
 
 tasks:
@@ -14,4 +20,26 @@ tasks:
     regexp:
       accept:
         - '2024-03-15'
+    download: "/watch_folder"
+  libreoffice_rpm:
+    html:
+      url: "https://www.libreoffice.org/download/download-libreoffice/?type=rpm-x86_64"
+    regexp:
+      accept:
+        - LibreOffice_25
+      reject:
+        - sdk
+        - src
+        - helppack
+    download: "/watch_folder"
+  libreoffice_mac:
+    html:
+      url: "https://www.libreoffice.org/download/download-libreoffice/?type=mac-aarch64"
+    regexp:
+      accept:
+        - LibreOffice_25
+      reject:
+        - sdk
+        - src
+        - helppack
     download: "/watch_folder"

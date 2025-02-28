@@ -1,0 +1,11 @@
+# Docker compose
+---
+services:
+  flexget:
+    build: .
+    environment:
+      - LOG_LEVEL=debug
+      - TZ=America/Los_Angeles
+    volumes:
+      - ./config:/config
+      - ./watch_folder:/watch_folder
